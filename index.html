@@ -1,44 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rent a Car | Alquiler de Vehículos</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f4f4f4; }
-        header { background-color: #1a1a1a; color: white; padding: 20px; }
-        .hero { padding: 50px 20px; background-color: #e6e6e6; }
-        .btn-whatsapp { background-color: #25d366; color: white; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; margin-top: 20px; }
-        .grid { display: flex; justify-content: center; gap: 20px; padding: 40px; flex-wrap: wrap; }
-        .car-card { background: white; border: 1px solid #ddd; padding: 20px; border-radius: 8px; width: 250px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ALA Rent Car — alquiler de vehículos en República Dominicana">
+<title>ALA Rent Car | Alquiler de Vehículos</title>
+<style>
+:root{--n:#071a36;--b:#1456a0;--w:#fff;--g:#f3f6fa;--t:#687386}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:#0a0d12}a{text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+header{position:fixed;top:0;left:0;right:0;z-index:5;background:#fffffff2;backdrop-filter:blur(14px);border-bottom:1px solid #e5e9ef}
+nav{height:74px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:950;color:var(--n);font-size:38px;line-height:.75;letter-spacing:-3px}.logo small{display:block;font-size:9px;letter-spacing:3px;color:#111;text-align:center;margin-top:7px}
+.links{display:flex;gap:28px;font-weight:700;font-size:14px}.links a:hover{color:var(--b)}.btn{display:inline-block;padding:13px 19px;border-radius:11px;font-weight:800;border:1px solid #d5dce5}.primary{background:var(--n);color:#fff;border-color:var(--n)}
+.hero{padding:145px 0 85px;color:#fff;background:radial-gradient(circle at 80% 30%,#1d65ac88,transparent 32%),linear-gradient(125deg,#06162d,#0c2b57 60%,#071a36)}
+.heroGrid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.eyebrow{font-size:11px;letter-spacing:2.5px;font-weight:900;text-transform:uppercase;color:#8eb8e8;margin-bottom:12px}
+h1{font-size:clamp(45px,6vw,76px);line-height:.97;letter-spacing:-4px;margin:0 0 22px}.hero p{font-size:18px;line-height:1.6;color:#d3deed;max-width:560px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.light{background:#fff;color:var(--n)}
+.showcase{height:370px;border-radius:28px;background:linear-gradient(145deg,#173a67,#050c18);border:1px solid #ffffff22;position:relative;overflow:hidden;box-shadow:0 30px 70px #0008}.showcase:after{content:"";position:absolute;width:90%;height:55%;left:5%;bottom:-20%;background:#2b70b555;border-radius:50%;filter:blur(8px)}
+.car{position:absolute;left:12%;right:12%;bottom:75px;height:125px;border-radius:55% 55% 16px 16px;transform:skewX(-8deg);background:linear-gradient(#eef3f8,#6d7783 65%,#151a20);box-shadow:0 25px 30px #0009;z-index:2}.car:before,.car:after{content:"";position:absolute;top:17px;width:28%;height:48px;background:#102b49;border:2px solid #b8c4d0}.car:before{left:14%}.car:after{right:14%}.wheel{position:absolute;bottom:-17px;width:44px;height:44px;border-radius:50%;background:#080b0e;border:7px solid #39414a}.w1{left:17%}.w2{right:17%}.badge{position:absolute;top:22px;left:22px;border:1px solid #ffffff30;background:#ffffff12;padding:7px 11px;border-radius:20px;font-size:10px;font-weight:900}.caption{position:absolute;bottom:25px;left:25px;z-index:3;font-weight:900}
+section{padding:80px 0}.head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}.head p{max-width:430px;color:var(--t)}h2{font-size:clamp(31px,4vw,48px);letter-spacing:-2px;line-height:1;margin:0}
+.catalog{background:var(--g)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border:1px solid #e3e7ed;border-radius:20px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-5px);box-shadow:0 18px 45px #071a3618}.photo{height:175px;background:linear-gradient(135deg,#e9eef4,#c5cfda);position:relative}.photo.dark{background:linear-gradient(135deg,#1d2734,#090d13)}.mini{position:absolute;left:15%;right:15%;bottom:38px;height:58px;border-radius:50% 50% 12px 12px;background:linear-gradient(#fff,#788491);box-shadow:0 15px 20px #0004}.mini i{position:absolute;bottom:-9px;width:22px;height:22px;border-radius:50%;background:#111;border:4px solid #444}.mini i:first-child{left:15%}.mini i:last-child{right:15%}.body{padding:18px}.tag{display:inline-block;color:var(--b);background:#eaf2fb;padding:5px 8px;border-radius:5px;font-size:10px;font-weight:900;text-transform:uppercase}.body h3{margin:10px 0 2px;font-size:21px}.year{color:var(--t);font-size:13px;margin-bottom:15px}.spec{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #e4e8ee;padding-top:13px;margin-bottom:16px;color:var(--t);font-size:11px}.spec strong{display:block;color:#111;font-size:12px}
+.bookingBox{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;padding:38px;border:1px solid #e1e6ec;border-radius:25px;box-shadow:0 18px 50px #071a3610;background:linear-gradient(135deg,#f5f8fb,#fff)}.bookingBox p{color:var(--t);line-height:1.6}.contact{display:grid;gap:9px;margin-top:22px}.contact a{padding:13px;border:1px solid #e1e6ec;border-radius:10px;font-weight:800}
+form{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:5px}.full{grid-column:1/-1}label{font-size:10px;font-weight:900;color:#526074;text-transform:uppercase;letter-spacing:.6px}input,select,textarea{width:100%;padding:12px;border:1px solid #d7dee7;border-radius:10px;font:inherit}textarea{min-height:80px;resize:vertical}.note{font-size:11px;color:#7a8595}
+.about{background:var(--n);color:#fff}.aboutGrid{display:grid;grid-template-columns:1fr 1fr;gap:50px}.about p{color:#cbd7e7;line-height:1.7}.features{display:grid;grid-template-columns:1fr 1fr;gap:12px}.feature{padding:18px;border:1px solid #ffffff18;border-radius:14px;background:#ffffff08}.feature span{display:block;color:#adbbce;font-size:12px;margin-top:5px}
+footer{background:#050d1a;color:#aeb9c8;padding:27px 0;font-size:12px}footer .wrap{display:flex;justify-content:space-between}
+@media(max-width:850px){.links{display:none}.heroGrid,.bookingBox,.aboutGrid{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:580px){.grid{grid-template-columns:1fr}.hero{padding-top:125px}.showcase{height:290px}.head{display:block}.head p{margin-top:12px}form{grid-template-columns:1fr}.features{grid-template-columns:1fr}footer .wrap{display:block}}
+</style>
 </head>
 <body>
+<header><div class="wrap"><nav>
+<a href="#inicio" class="logo">ALA<small>RENT CAR</small></a>
+<div class="links"><a href="#flota">Flota</a><a href="#reservar">Reservar</a><a href="#nosotros">Nosotros</a></div>
+<a class="btn primary" href="https://wa.me/18090000000?text=Hola%20ALA%20Rent%20Car%2C%20quiero%20cotizar." target="_blank">WhatsApp</a>
+</nav></div></header>
 
-    <header>
-        <h1>Mi Rent a Car</h1>
-        <p>El auto ideal para tu viaje</p>
-    </header>
+<main>
+<section class="hero" id="inicio"><div class="wrap heroGrid"><div>
+<div class="eyebrow">Movilidad premium · República Dominicana</div>
+<h1>Tu próximo viaje empieza con ALA.</h1>
+<p>Alquila SUVs y vehículos premium con una experiencia rápida, elegante y profesional. Elige tu vehículo y solicita disponibilidad directamente.</p>
+<div class="actions"><a class="btn light" href="#flota">Ver vehículos</a><a class="btn" style="color:#fff;border-color:#ffffff44" href="#reservar">Solicitar reserva</a></div>
+</div><div class="showcase"><div class="badge">ALA RENT CAR</div><div class="car"><i class="wheel w1"></i><i class="wheel w2"></i></div><div class="caption">Flota seleccionada para cada ocasión.</div></div></div></section>
 
-    <section class="hero">
-        <h2>Reserva tu vehículo hoy mismo</h2>
-        <p>Alquileres rápidos, seguros y económicos sin complicaciones.</p>
-        <!-- Reemplaza el número de teléfono abajo con el tuyo (incluyendo código de país) -->
-        <a href="https://wa.me" class="btn-whatsapp" target="_blank">Reservar por WhatsApp</a>
-    </section>
+<section class="catalog" id="flota"><div class="wrap">
+<div class="head"><div><div class="eyebrow">Nuestra flota</div><h2>Escoge cómo quieres moverte.</h2></div><p>Vehículos para ciudad, viajes, negocios y experiencias especiales.</p></div>
+<div class="grid">
+<article class="card"><div class="photo "><div class="mini"><i></i><i></i></div></div><div class="body"><span class="tag">SUV</span><h3>Honda CR-V</h3><div class="year">2023</div><div class="spec"><div>Clase<strong>SUV</strong></div><div>Pasajeros<strong>5</strong></div><div>Uso<strong>Diario</strong></div></div><a class="btn primary" style="width:100%;text-align:center" href="#reservar" onclick="selectCar('Honda CR-V 2023')">Reservar</a></div></article><article class="card"><div class="photo dark"><div class="mini"><i></i><i></i></div></div><div class="body"><span class="tag">SUV</span><h3>Changan UNI-T</h3><div class="year">2025</div><div class="spec"><div>Clase<strong>SUV</strong></div><div>Pasajeros<strong>5</strong></div><div>Uso<strong>Ciudad</strong></div></div><a class="btn primary" style="width:100%;text-align:center" href="#reservar" onclick="selectCar('Changan UNI-T 2025')">Reservar</a></div></article><article class="card"><div class="photo dark"><div class="mini"><i></i><i></i></div></div><div class="body"><span class="tag">SUV</span><h3>Chevrolet Tahoe</h3><div class="year">2025</div><div class="spec"><div>Clase<strong>Full Size</strong></div><div>Pasajeros<strong>7+</strong></div><div>Uso<strong>Viajes</strong></div></div><a class="btn primary" style="width:100%;text-align:center" href="#reservar" onclick="selectCar('Chevrolet Tahoe 2025')">Reservar</a></div></article><article class="card"><div class="photo dark"><div class="mini"><i></i><i></i></div></div><div class="body"><span class="tag">Premium</span><h3>Mercedes-AMG 53</h3><div class="year">2026</div><div class="spec"><div>Clase<strong>AMG</strong></div><div>Pasajeros<strong>5</strong></div><div>Uso<strong>Premium</strong></div></div><a class="btn primary" style="width:100%;text-align:center" href="#reservar" onclick="selectCar('Mercedes-AMG 53 2026')">Reservar</a></div></article><article class="card"><div class="photo dark"><div class="mini"><i></i><i></i></div></div><div class="body"><span class="tag">Premium</span><h3>BMW X6 M</h3><div class="year">2026</div><div class="spec"><div>Clase<strong>M</strong></div><div>Pasajeros<strong>5</strong></div><div>Uso<strong>Premium</strong></div></div><a class="btn primary" style="width:100%;text-align:center" href="#reservar" onclick="selectCar('BMW X6 M 2026')">Reservar</a></div></article><article class="card"><div class="photo "><div class="mini"><i></i><i></i></div></div><div class="body"><span class="tag">SUV</span><h3>Kia Sorento</h3><div class="year">2025</div><div class="spec"><div>Clase<strong>SUV</strong></div><div>Pasajeros<strong>7</strong></div><div>Uso<strong>Familia</strong></div></div><a class="btn primary" style="width:100%;text-align:center" href="#reservar" onclick="selectCar('Kia Sorento 2025')">Reservar</a></div></article>
+</div></div></section>
 
-    <section class="grid">
-        <div class="car-card">
-            <h3>Auto Económico</h3>
-            <p>Ideal para la ciudad.</p>
-            <strong>Desde $30/día</strong>
-        </div>
-        <div class="car-card">
-            <h3>SUV Familiar</h3>
-            <p>Espacio y comodidad.</p>
-            <strong>Desde $55/día</strong>
-        </div>
-    </section>
+<section id="reservar"><div class="wrap"><div class="bookingBox">
+<div><div class="eyebrow">Reserva</div><h2>Solicita tu vehículo en menos de un minuto.</h2><p>Completa los datos y la web abrirá WhatsApp con el mensaje preparado para confirmar disponibilidad, precio y condiciones.</p>
+<div class="contact"><a href="https://wa.me/18090000000" target="_blank">💬 WhatsApp · Cotizar ahora</a><a href="https://instagram.com/ala.rentcar" target="_blank">◎ Instagram · @ala.rentcar</a></div></div>
+<form onsubmit="sendWA(event)">
+<div class="field"><label>Nombre</label><input id="name" required placeholder="Tu nombre"></div>
+<div class="field"><label>Teléfono</label><input id="phone" required placeholder="809-000-0000"></div>
+<div class="field"><label>Vehículo</label><select id="vehicle"><option>Selecciona un vehículo</option><option>Honda CR-V 2023</option><option>Changan UNI-T 2025</option><option>Chevrolet Tahoe 2025</option><option>Mercedes-AMG 53 2026</option><option>BMW X6 M 2026</option><option>Kia Sorento 2025</option></select></div>
+<div class="field"><label>Recogida</label><input id="pickup" type="date" required></div>
+<div class="field"><label>Devolución</label><input id="return" type="date" required></div>
+<div class="field"><label>Lugar</label><input id="place" placeholder="Punta Cana, Santo Domingo..."></div>
+<div class="field full"><label>Mensaje</label><textarea id="msg" placeholder="Información adicional"></textarea></div>
+<button class="btn primary full" type="submit">Enviar solicitud por WhatsApp →</button>
+<div class="note full">La solicitud no confirma automáticamente una reserva. ALA Rent Car debe verificar disponibilidad y condiciones.</div>
+</form></div></div></section>
 
-</body>
-</html>
+<section class="about" id="nosotros"><div class="wrap aboutGrid"><div><div class="eyebrow">ALA Rent Car</div><h2>Una marca pensada para verse bien y vender mejor.</h2><p>Identidad en azul marino, negro y blanco; catálogo claro; contacto directo y un flujo de reserva preparado para crecer hacia una plataforma completa de rent-a-car.</p></div>
+<div class="features"><div class="feature"><b>Flota seleccionada</b><span>SUVs y vehículos premium.</span></div><div class="feature"><b>Reserva rápida</b><span>Solicitud sencilla desde cualquier dispositivo.</span></div><div class="feature"><b>WhatsApp</b><span>Contacto directo con el cliente.</span></div><div class="feature"><b>Instagram</b><span>Tu vitrina visual conectada con la web.</span></div></div></div></section>
+</main>
+<footer><div class="wrap"><b style="color:#fff">ALA RENT CAR</b><span>© <span id="yr"></span> ALA Rent Car · Todos los derechos reservados.</span></div></footer>
+<script>
+document.getElementById("yr").textContent=new Date().getFullYear();
+function selectCar(v){document.getElementById("vehicle").value=v}
+function sendWA(e){
+ e.preventDefault();
+ const phone="18090000000"; // CAMBIAR por el WhatsApp real
+ const text=`Hola ALA Rent Car. Quiero solicitar una reserva.%0A%0ANombre: ${encodeURIComponent(name.value)}%0ATeléfono: ${encodeURIComponent(document.getElementById("phone").value)}%0AVehículo: ${encodeURIComponent(vehicle.value)}%0ARecogida: ${pickup.value}%0ADevolución: ${return.value}%0ALugar: ${encodeURIComponent(place.value)}%0AMensaje: ${encodeURIComponent(msg.value)}`;
+ window.open(`https://wa.me/${phone}?text=${text}`,"_blank");
+}
+</script>
+</body></html>
